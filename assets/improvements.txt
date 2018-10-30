@@ -1,0 +1,5 @@
+Improvements
+
+ - Queue System
+ - Text Responses (Tag Channel Members)
+ - Add playing from URL
