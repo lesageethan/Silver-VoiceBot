@@ -69,7 +69,11 @@ function handleMessage(message) { //handling message commands
         commandPlay(id, message.member);
         fetchVideoInfo(id, function (err, videoInfo) {
           if (err) throw new Error(err);
-          message.channel.send("Playing: **" + videoInfo.title + "**");
+          if (id != "Vbks4abvLEw") {
+            message.channel.send("Playing: **" + videoInfo.title + "**");
+          } else {
+            message.channel.send("**No Video Found**");
+          }
         });
       });
     break;
@@ -113,7 +117,11 @@ function handleSpeech(member, speech) { //handling voice commands
           commandPlay(id, 'speechText');
           fetchVideoInfo(id, function (err, videoInfo) {
             if (err) throw new Error(err);
-              listenChannel.send(" Playing: **" + videoInfo.title + "**");
+              if (id != "Vbks4abvLEw") {
+                listenChannel.send(" Playing: **" + videoInfo.title + "**");
+              } else {
+                listenChannel.send("**No Video Found**");
+              }
             });
         });
       break;
@@ -191,13 +199,10 @@ function commandPlay(id, member) {
   }
 
   isPlaying = true;
-
   voiceChannel.join().then(function (connection) {
     YTstreamT = ytdl("https://youtube.com/watch?v=" + id, { //set stream from appropriate youtube video
       filter: 'audioonly'
     });
-
-    console.log("https://youtube.com/watch?v=" + id);
 
     try {
       console.log("attempt playing");
@@ -218,7 +223,6 @@ function commandPlay(id, member) {
 function getID(str, cb) { //find id of youtube video to be played
   if (isYoutube(str)) {
     cb(getYoutubeID(str));
-    console.log(id);
   } else {
     search_video(str, function(id) {
       cb(id);
@@ -230,7 +234,11 @@ function getID(str, cb) { //find id of youtube video to be played
 function search_video(query, callback) { //search for youtube video according to search terms
   request("https://www.googleapis.com/youtube/v3/search?part=id&type=video&q=" + encodeURIComponent(query) + "&key=" + yt_api_key, function(error, response, body) {
     var json = JSON.parse(body);
-    callback(json.items[0].id.videoId);
+    try {
+      callback(json.items[0].id.videoId);
+    } catch(err) {
+      callback("Vbks4abvLEw");
+    }
   });
 }
 
@@ -336,7 +344,7 @@ function processRawToWav(filepath, outputpath, cb) {
         console.log(err);
         cb(null);
         //return null;
-      }).then(deleteFile(filepath)).then(deleteFile(outputpath));
+      }).then(deleteFile(filepath));
     })
   .on('error', function(err) {
     console.log('an error happened: ' + err.message);
@@ -357,14 +365,6 @@ function makeDir(dir) {
   try {
     fs.mkdirSync(dir);
   } catch (err) {}
-}
-
-function reduceTrailingWhitespace(string) {
-  for (var i = string.length - 1; i >= 0; i--) {
-    if (string.charAt(i) == ' ') string = string.slice(0, i);
-    else return string;
-  }
-  return string;
 }
 
 function commandStop() {
