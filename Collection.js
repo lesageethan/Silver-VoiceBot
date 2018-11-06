@@ -1,3 +1,4 @@
+/* commented out cause it was screwing with my eslint
 Collection {
   '206083473889427458' => GuildMember {
   guild:
@@ -147,3 +148,4 @@ Collection {
      webhookID: null,
      hit: null,
      _edits: [] } } }
+     */
