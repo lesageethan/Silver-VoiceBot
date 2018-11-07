@@ -21,6 +21,7 @@ class Silver extends Client {
         this.listening = false;
         this.listenChannel = '';
         this.listenStreams = new Map();
+        this.repeat = false;
 
     }
     // This is the reload function, so we don't have to reboot the bot everytime we update.
@@ -36,6 +37,7 @@ class Silver extends Client {
             }
         }
         if (author) author.send(`Reloaded all modules.`).catch(() => { });
+        console.log('Reloaded all Modules');
     }
 } // Create Client
 const discord_token = config.discord_token;
@@ -47,7 +49,8 @@ const client = new Silver({
 });
 
 const init = () => {
-    client.login(process.env.CLIENT_TOKEN);
+    client.login(discord_token);
+    require('./modules/eventloader')(client);
 };
 
 init();

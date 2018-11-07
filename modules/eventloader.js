@@ -5,7 +5,7 @@ module.exports = client => {
         reqevent('ready').run(client);
     });
     client.on('message', message => {
-        reqevent('message').run(message).catch(err => console.log(err));
+        reqevent('message').run(message);
     });
     client.on('guildMemberSpeaking', (member, speaking) => {
         reqevent('guildMemberSpeaking').run(member, speaking);

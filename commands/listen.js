@@ -13,7 +13,7 @@ exports.run = (message) => {
     message.client.voiceChannel = message.member.voiceChannel;
     message.client.textChannel.send('Listening in to **' + message.member.voiceChannel.name + '**!'); // respond
 
-    message.client.voiceChannel.join().then((connection) => {
+    message.client.voiceChannel.join().then(connection => {
         message.client.listenConnection = connection;
 
         let receiver = connection.createReceiver();
@@ -21,14 +21,16 @@ exports.run = (message) => {
             let hexString = data.toString('hex');
             let stream = message.client.listenStreams.get(user.id);
             if (!stream) {
-                if (hexString === 'f8fffe') return;
-                let outputPath = `./recordings/${user.id}-${Date.now()}.opus_string`; // record audio
+                if (hexString === 'f8fffe') {
+                    return;
+                }
+                let outputPath = `./recordings/${Date.now()}.opus_string`; // record audio
                 stream = fs.createWriteStream(outputPath);
                 message.client.listenStreams.set(user.id, stream);
             }
             stream.write(`,${hexString}`);
         });
         message.client.listenReceiver = receiver;
-    }).catch(console.error); // catch errors
-    require('./play.js').run('speechText', '6485oNnwum8');
+    }).catch(err => console.log(err.stack)); // catch errors
+    require('./play.js').run(message, ['https://www.youtube.com/watch?v=msZIL66yUq8', 'speechText']);
 };

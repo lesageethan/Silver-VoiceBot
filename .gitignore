@@ -1,0 +1,16 @@
+# Node build artifacts
+node_modules
+npm-debug.log
+
+# Local development
+*.env
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Logs and databases #
+######################
+*.log
+*.sql
+settings.json

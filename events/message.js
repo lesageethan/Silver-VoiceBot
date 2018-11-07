@@ -12,11 +12,14 @@ exports.run = (message) => {
     let command = args.shift();
     console.log(args);
     switch (command) { // choosing function according to command
-        case 'play':
         case 'skip':
         case 'next':
+            command = 'play';
             break;
+        case 'stop':
+            command = 'leave';
     }
-    if (fs.existssync(`../commands/${command}.js`)) require(`../commands/${command}.js`).run(message);
+    console.log(command);
+    if (fs.existsSync(`./commands/${command}.js`)) require(`../commands/${command}.js`).run(message, args);
     else message.channel.send('Command not recognized! Type \'!help\' for a list of commands.');
 };

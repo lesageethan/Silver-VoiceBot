@@ -1,11 +1,11 @@
 const Discord = require("discord.js"); 
 const ytdl = require("ytdl-core"); 
 const request = require("request"); 
-const getYoutubeID = require("get-youtube-id");
-const fetchVideoInfo = require("youtube-info"); 
+// const getYoutubeID = require("get-youtube-id");
+// const fetchVideoInfo = require("youtube-info"); 
 const ffmpeg = require('fluent-ffmpeg'); 
 const WitSpeech = require('node-witai-speech'); 
-const decode = require('./decodeOpus.js'); 
+const decode = require('./modules/decodeOpus.js'); 
 const fs = require('fs'); 
 const path = require('path'); 
 const opus = require('node-opus'); 
