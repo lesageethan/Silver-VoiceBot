@@ -43,3 +43,12 @@ This project was created to revive XianHaiC's 'VoiceBot' from 2017. I have not o
  If you can think of improvements, or if you want to add some improvements, please make a push request. I would be more than happy to let you improve the code.
  
  Sorry if the code is messy, this is my first ever NodeJS project!
+ 
+ ## Changelog
+ 
+ For the sake of transparency, here is a list of all versions and updates:
+ 
+ | Version Number  | Contributor | Changes |
+| ------------- | ------------- | ------------- |
+| v1.0.0  | EthanLS  | Initial Contribution |
+| v1.0.1  | Holo-Buckshot  | Split index.js file / Improvements to code syntax / Deleted unnecessary functions and files. |
