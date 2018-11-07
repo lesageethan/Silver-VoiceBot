@@ -1,0 +1,26 @@
+This file exists because commit messages are too small.
+
+1. Collection.js, i think this is a test file? No harm in keeping, but no harm in deleting either.
+
+2. All 'vars' i found were changed to let's or consts, var is just nasty imo
+
+3. Index.js was broken up into several files in order to increase readability and allow for reloading.
+
+Silver.js - Main bot file, contains loging, and client creation, as well as the require for the event loader
+
+Eventloader.js - Main event handler, takes the client then splits it amongst the events as they are called.
+
+Message.js - Message event file
+Ready.js - Ready event file
+guildMemberSpeaking - speaking file
+
+Removed mkdir function, pointless
+Removed delete function, use fs.unlinksync instead of callbacks
+
+I actually stopped paying attention to what i was doing tbh...
+
+I pulled some old code i had from my own music bot to streamline finding videos also started the basis for storing all sorts 
+of info about the video for display purposes.
+
+In general what I did was give you a preview of a more broken up version of your bot which is a little more readable
+as well as more workable with reloading and such.
