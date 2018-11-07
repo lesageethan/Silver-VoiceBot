@@ -4,7 +4,12 @@ exports.run = (message) => {
     message.client.queue = [];
     if (message.client.dispatcher) message.client.dispatcher.end();
     message.client.dispatcher = null;
-    require('./stop.js').run(message);
+    if (message.client.listenReceiver) {
+        message.client.listening = false;
+        message.client.listenReceiver.destroy();
+        message.client.listenReceiver = null;
+        message.client.textChannel.send('Stopped listening!');
+    }
     if (message.client.listenReceiver) {
         message.client.listenReceiver.destroy();
         message.client.listenReceiver = null;

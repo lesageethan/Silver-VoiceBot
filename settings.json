@@ -1,7 +1,7 @@
 {
-  "wit_api_key": "-",
-  "yt_api_key": "-",
-  "discord_token": "-",
+  "wit_api_key": "3WLOOZ6WRXIESTQBKQUY5WSF6W24FNIR",
+  "yt_api_key": "AIzaSyDTDzi2ZnoSZ4u1aqclzdHXRYLz_nrojL4",
+  "discord_token": "NTA5NDUxODA1MTIyNjI1NTY2.DsN_hA.HZSZ4ikgG2_SFhejUWtGrJ6cwxs",
   "bot_controller": "-",
   "content_type": "audio/wav",
   "prefix": "//"
