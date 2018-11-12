@@ -51,4 +51,3 @@ This project was created to revive XianHaiC's 'VoiceBot' from 2017. I have not o
  | Version Number  | Contributor | Changes |
 | ------------- | ------------- | ------------- |
 | v1.0.0  | EthanLS  | Initial Contribution |
-| v1.0.1  | Holo-Buckshot  | Split index.js file / Improvements to code syntax / Deleted unnecessary functions and files. |
