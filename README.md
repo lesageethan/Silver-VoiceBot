@@ -4,23 +4,17 @@ A voice-controlled Discord Bot, based off of code from XianHaiC.
 
 To test the bot, use the test discord server: https://discord.gg/QCR2nkb
 
-## About
+## Improvements
 
-This project was created to revive XianHaiC's 'VoiceBot' from 2017. I have not only fixed his original VoiceBot, but I have improved it in a number of ways:
+This project was created to revive XianHaiC's 'VoiceBot' from 2017. I have not only fixed his original VoiceBot, but I have/intent to improve it in a number of ways:
 
- - I have added a prefix for voice commands: "Silver, play Arctic Monkeys"
- 
- - I have simplified the playing system, removing the queue. This makes it more voice-interaction friendly
- 
- - I have removed the imagebot functionality, as this was broken (I think)
- 
- - I have changed the prefix from '!' to '//' to avoid clashing with other Discord bots
- 
- - I have added a beep when the bot listens, so users are alerted
- 
- - Recordings are now deleted as they are used, so creepy recordings are not stored anywhere
- 
- - The correct node modules are included with the repo now, as they need to be installed in a specific order or they will not work
+ - [x] I have added a prefix for voice commands: "Silver, play Arctic Monkeys"
+ - [x] Simplified the playing system, removing the queue. This makes it more voice-interaction friendly
+ - [x] Removed the imagebot functionality, as this was broken (I think)
+ - [x] Changed the prefix from '!' to '//' to avoid clashing with other Discord bots
+ - [x] Added a beep when the bot listens, so users are alerted
+ - [x] Recordings are now deleted as they are used, so creepy recordings are not stored anywhere
+ - [x] The correct node modules are included with the repo now, as they need to be installed in a specific order or they will not work
  
  ## Setup
  
