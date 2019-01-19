@@ -52,4 +52,4 @@ This project was created to revive XianHaiC's 'VoiceBot' from 2017. I have not o
  
  | Version Number  | Contributor | Changes |
 | ------------- | ------------- | ------------- |
-| v1.0.0  | EthanLS  | Initial Contribution |
+| v1.0.0  "Saucito"  | EthanLS  | Initial Contribution |
