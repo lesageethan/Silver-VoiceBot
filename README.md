@@ -16,6 +16,14 @@ This project was created to revive XianHaiC's 'VoiceBot' from 2017. I have not o
  - [x] Recordings are now deleted as they are used, so creepy recordings are not stored anywhere
  - [x] The correct node modules are included with the repo now, as they need to be installed in a specific order or they will not work
  
+ - [ ] Stop random crashing
+ - [ ] Improve voice recognition
+ - [ ] Add information to 'help' command
+ - [ ] Add voice
+ - [ ] Make public
+ - [ ] Add other functions
+ - [ ] Add queue
+
  ## Setup
  
  To set up the bot, you will need to first get an API key for each of the required APIs (found in 'settings.json'). You then just need to run the index.js file.
@@ -34,7 +42,7 @@ This project was created to revive XianHaiC's 'VoiceBot' from 2017. I have not o
  
  I want to keep this repo fresh and regularly updated. If you find any bugs please message me on my twitter: https://twitter.com/RealEthanLS, or email me: lesageethan@gmail.com.
  
- If you can think of improvements, or if you want to add some improvements, please make a push request. I would be more than happy to let you improve the code.
+ If you can think of improvements, or if you want to add some improvements, please make a pull request. I would be more than happy to let you improve the code.
  
  Sorry if the code is messy, this is my first ever NodeJS project!
  
