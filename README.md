@@ -2,6 +2,8 @@
 
 A voice-controlled Discord Bot, based off of code from XianHaiC.
 
+This bot is no longer being developed due to lack of interest and difficult bug-fixing. Please contact me if you have any questions, but I will no longer be fixing or improving the code.
+
 To test the bot, use the test discord server: https://discord.gg/QCR2nkb
 
 ## Improvements
